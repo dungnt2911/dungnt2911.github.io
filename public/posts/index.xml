@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Blog Lập Trình Java &amp; JavaScript</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Blog Lập Trình Java &amp; JavaScript</description>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>vi</language>
+    <lastBuildDate>Fri, 10 Oct 2025 08:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arrow Functions va ES6</title>
+      <link>http://localhost:1313/posts/bai9/</link>
+      <pubDate>Fri, 10 Oct 2025 08:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/bai9/</guid>
+      <description>&lt;p&gt;Arrow function la cach viet ham ngan gon hon trong ES6.&lt;/p&gt;
+&lt;p&gt;ES6 them nhieu tinh nang moi: let, const, template literals, destructuring.&lt;/p&gt;
+&lt;p&gt;Arrow function khong co this rieng, ke thua this tu context ben ngoai.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Async Await va Promise</title>
+      <link>http://localhost:1313/posts/bai8/</link>
+      <pubDate>Fri, 10 Oct 2025 07:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/bai8/</guid>
+      <description>&lt;p&gt;Promise xu ly cac tac vu bat dong bo trong JavaScript.&lt;/p&gt;
+&lt;p&gt;Async/Await giup viet code bat dong bo theo phong cach dong bo.&lt;/p&gt;
+&lt;p&gt;Try-catch duoc su dung de bat loi trong async function.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DOM Manipulation</title>
+      <link>http://localhost:1313/posts/bai7/</link>
+      <pubDate>Fri, 10 Oct 2025 06:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/bai7/</guid>
+      <description>&lt;p&gt;DOM (Document Object Model) la cau truc cay cua trang web.&lt;/p&gt;
+&lt;p&gt;JavaScript co the thay doi noi dung, thuoc tinh va CSS cua phan tu HTML.&lt;/p&gt;
+&lt;p&gt;Cac phuong thuc pho bien: getElementById, querySelector, addEventListener.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>JavaScript co ban</title>
+      <link>http://localhost:1313/posts/bai6/</link>
+      <pubDate>Fri, 10 Oct 2025 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/bai6/</guid>
+      <description>&lt;p&gt;JavaScript la ngon ngu lap trinh phia client chay tren trinh duyet.&lt;/p&gt;
+&lt;p&gt;Cac kieu du lieu: Number, String, Boolean, Object, Array.&lt;/p&gt;
+&lt;p&gt;JavaScript ho tro lap trinh huong doi tuong va functional programming.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lambda va Stream API</title>
+      <link>http://localhost:1313/posts/bai5/</link>
+      <pubDate>Fri, 10 Oct 2025 04:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/bai5/</guid>
+      <description>&lt;p&gt;Lambda expression giup viet code ngan gon va de doc hon.&lt;/p&gt;
+&lt;p&gt;Stream API cho phep xu ly du lieu theo phong cach functional programming.&lt;/p&gt;
+&lt;p&gt;Filter, map, reduce la cac phep toan pho bien tren Stream.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Exception Handling trong Java</title>
+      <link>http://localhost:1313/posts/bai4/</link>
+      <pubDate>Fri, 10 Oct 2025 03:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/bai4/</guid>
+      <description>&lt;p&gt;Exception handling giup xu ly loi trong chuong trinh mot cach an toan.&lt;/p&gt;
+&lt;p&gt;Su dung try-catch-finally de bat va xu ly ngoai le.&lt;/p&gt;
+&lt;p&gt;Checked Exception va Unchecked Exception la hai loai ngoai le chinh.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Collections Framework trong Java</title>
+      <link>http://localhost:1313/posts/bai3/</link>
+      <pubDate>Fri, 10 Oct 2025 02:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/bai3/</guid>
+      <description>&lt;p&gt;Collections Framework cung cap cac cau truc du lieu va thuat toan de lam viec voi tap hop du lieu.&lt;/p&gt;
+&lt;p&gt;Cac interface chinh: List, Set, Map, Queue.&lt;/p&gt;
+&lt;p&gt;ArrayList, LinkedList, HashSet, HashMap la cac lop thuong dung.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Gioi thieu Java</title>
+      <link>http://localhost:1313/posts/bai1/</link>
+      <pubDate>Fri, 10 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/bai1/</guid>
+      <description>&lt;p&gt;Java la ngon ngu lap trinh huong doi tuong.&lt;/p&gt;
+&lt;p&gt;Java rat pho bien.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lap trinh huong doi tuong OOP trong Java</title>
+      <link>http://localhost:1313/posts/bai2/</link>
+      <pubDate>Fri, 10 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/bai2/</guid>
+      <description>&lt;p&gt;## OOP la gi&lt;/p&gt;
+&lt;p&gt;Lap trinh huong doi tuong (Object-Oriented Programming) la mot phuong phap lap trinh dua tren khai niem doi tuong va lop.&lt;/p&gt;
+&lt;p&gt;## Bon tinh chat cua OOP&lt;/p&gt;
+&lt;p&gt;### 1. Tinh dong goi (Encapsulation)&lt;/p&gt;
+&lt;p&gt;Dong goi la che giau thong tin ben trong doi tuong va chi cho phep truy cap thong qua cac phuong thuc public.&lt;/p&gt;
+&lt;p&gt;### 2. Tinh ke thua (Inheritance)&lt;/p&gt;
+&lt;p&gt;Ke thua cho phep mot lop con ke thua cac thuoc tinh va phuong thuc tu lop cha.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
