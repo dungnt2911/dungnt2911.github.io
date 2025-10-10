@@ -1,0 +1,81 @@
+baseURL = "https://dungnt2911.github.io/"
+languageCode = "vi"
+title = "Blog Lập Trình Java & JavaScript"
+theme = "PaperMod"
+
+[params]
+  description = "Chia sẻ kiến thức về Java và JavaScript"
+  author = "Nguyễn Tiến Dũng"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  
+  # Dark Mode
+  defaultTheme = "auto" # auto, light, dark
+  
+  # Avatar/Profile Mode
+  [params.profileMode]
+    enabled = true
+    title = "Nguyễn Tiến Dũng"
+    subtitle = "Java & JavaScript Developer"
+    imageUrl = "DDM_9972.jpg" # Đặt ảnh trong thư mục static/
+    imageTitle = "My Avatar"
+    imageWidth = 150
+    imageHeight = 150
+    
+    [[params.profileMode.buttons]]
+      name = "Blog"
+      url = "/posts"
+    [[params.profileMode.buttons]]
+      name = "GitHub"
+      url = "https://github.com/dungnt2911"
+
+  # Social Links
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/dungnt2911"
+  
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://linkedin.com/in/yourprofile"
+  
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:youremail@example.com"
+
+# Trang chủ (nếu không dùng profileMode)
+[params.homeInfoParams]
+  Title = "Chào mừng đến với Blog Lập Trình 👋"
+  Content = "Chia sẻ kiến thức và kinh nghiệm về Java & JavaScript"
+
+# Menu điều hướng
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Blog"
+  url = "/posts/"
+  weight = 2
+
+[[menu.main]]
+  name = "Profile"
+  url = "/profile/"
+  weight = 3
+
+[[menu.main]]
+  name = "Tags"
+  url = "/tags/"
+  weight = 4
+
+[[menu.main]]
+  name = "Search"
+  url = "/search/"
+  weight = 5
+
+# Bật tính năng tìm kiếm
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
