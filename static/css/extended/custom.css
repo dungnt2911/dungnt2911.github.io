@@ -1,0 +1,377 @@
+/* ===================================
+   CUSTOM THEME - BLUE & MODERN
+   Blog Lập Trình Java & JavaScript
+   =================================== */
+
+/* Import Google Fonts - Inter & Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ============ ROOT VARIABLES ============ */
+:root {
+    /* Primary Blue Colors */
+    --primary-blue: #2563eb;
+    --primary-blue-dark: #1e40af;
+    --primary-blue-light: #3b82f6;
+    --accent-blue: #60a5fa;
+    
+    /* Light Mode Colors */
+    --light-bg: #ffffff;
+    --light-bg-secondary: #f8fafc;
+    --light-text: #1e293b;
+    --light-text-secondary: #475569;
+    --light-border: #e2e8f0;
+    --light-code-bg: #f1f5f9;
+    
+    /* Dark Mode Colors */
+    --dark-bg: #0f172a;
+    --dark-bg-secondary: #1e293b;
+    --dark-text: #f1f5f9;
+    --dark-text-secondary: #cbd5e1;
+    --dark-border: #334155;
+    --dark-code-bg: #1e293b;
+    
+    /* Fonts */
+    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-heading: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-code: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+    
+    /* Spacing & Sizing */
+    --border-radius: 12px;
+    --border-radius-small: 8px;
+    --transition: all 0.3s ease;
+}
+
+/* ============ BASE STYLES ============ */
+body {
+    font-family: var(--font-main) !important;
+    font-size: 16px;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6,
+.post-title,
+.page-header h1 {
+    font-family: var(--font-heading) !important;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+/* Code blocks */
+code, pre, .hljs {
+    font-family: var(--font-code) !important;
+    font-size: 14px;
+}
+
+/* ============ LIGHT MODE ============ */
+.theme-light,
+[data-theme="light"] {
+    --theme: light;
+    --entry: var(--light-bg);
+    --primary: var(--light-text);
+    --secondary: var(--light-text-secondary);
+    --tertiary: var(--light-bg-secondary);
+    --content: var(--light-text);
+    --hljs-bg: var(--light-code-bg);
+    --code-bg: var(--light-code-bg);
+    --border: var(--light-border);
+}
+
+/* ============ DARK MODE ============ */
+.theme-dark,
+[data-theme="dark"] {
+    --theme: dark;
+    --entry: var(--dark-bg-secondary);
+    --primary: var(--dark-text);
+    --secondary: var(--dark-text-secondary);
+    --tertiary: var(--dark-bg);
+    --content: var(--dark-text);
+    --hljs-bg: var(--dark-code-bg);
+    --code-bg: var(--dark-code-bg);
+    --border: var(--dark-border);
+}
+
+body {
+    background: var(--tertiary);
+}
+
+/* ============ PRIMARY BLUE ACCENTS ============ */
+
+/* Links */
+a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--primary-blue-dark);
+}
+
+/* Buttons */
+.button,
+button,
+input[type="submit"],
+.post-tags a,
+.share-buttons a {
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: var(--border-radius-small);
+    transition: var(--transition);
+    font-family: var(--font-main);
+    font-weight: 500;
+}
+
+.button:hover,
+button:hover,
+.post-tags a:hover {
+    background: var(--primary-blue-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* Tags */
+.post-tags a {
+    background: var(--primary-blue);
+    opacity: 0.9;
+}
+
+.post-tags a:hover {
+    opacity: 1;
+}
+
+/* ============ HEADER STYLING ============ */
+.header {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid var(--border);
+}
+
+.theme-dark .header {
+    background: rgba(15, 23, 42, 0.8);
+}
+
+.logo a {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--primary-blue) !important;
+    letter-spacing: -0.02em;
+}
+
+/* Theme toggle button */
+#theme-toggle {
+    background: var(--primary-blue);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+#theme-toggle:hover {
+    background: var(--primary-blue-dark);
+    transform: rotate(180deg);
+}
+
+/* ============ POST CARDS ============ */
+.post-entry {
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.post-entry:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-blue);
+}
+
+.theme-dark .post-entry:hover {
+    box-shadow: 0 12px 24px rgba(37, 99, 235, 0.2);
+}
+
+.entry-header h2 {
+    color: var(--primary);
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.entry-header h2:hover {
+    color: var(--primary-blue);
+}
+
+/* ============ CODE BLOCKS ============ */
+pre {
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border);
+    padding: 20px;
+    overflow-x: auto;
+}
+
+code {
+    background: var(--code-bg);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+pre code {
+    background: transparent;
+    padding: 0;
+}
+
+/* ============ PROFILE/AVATAR ============ */
+.profile img,
+.avatar img {
+    border-radius: 50%;
+    border: 3px solid var(--primary-blue);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* ============ SCROLLBAR ============ */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--tertiary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-blue);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-blue-dark);
+}
+
+/* ============ SELECTION ============ */
+::selection {
+    background: var(--primary-blue);
+    color: white;
+}
+
+::-moz-selection {
+    background: var(--primary-blue);
+    color: white;
+}
+
+/* ============ FOOTER ============ */
+.footer {
+    border-top: 1px solid var(--border);
+    margin-top: 60px;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 14px;
+    color: var(--secondary);
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+    
+    .entry-header h2 {
+        font-size: 20px;
+    }
+}
+
+/* ============ ANIMATIONS ============ */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.post-entry,
+.main .post-content {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* ============ IMPROVEMENTS ============ */
+
+/* Better focus states */
+a:focus,
+button:focus {
+    outline: 2px solid var(--primary-blue);
+    outline-offset: 2px;
+}
+
+/* Better reading experience */
+.post-content {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.post-content p {
+    margin-bottom: 1.5em;
+}
+
+/* Table of Contents */
+.toc {
+    background: var(--tertiary);
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius);
+    padding: 20px;
+}
+
+.toc a {
+    color: var(--secondary);
+}
+
+.toc a:hover {
+    color: var(--primary-blue);
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 4px solid var(--primary-blue);
+    padding-left: 20px;
+    margin: 20px 0;
+    font-style: italic;
+    color: var(--secondary);
+}
+
+/* Images */
+.post-content img {
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ============ FINAL TOUCHES ============ */
+.main {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.post-meta {
+    color: var(--secondary);
+    font-size: 14px;
+}
+
+.post-meta-item {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.post-meta svg {
+    color: var(--primary-blue);
+    margin-right: 6px;
+}
