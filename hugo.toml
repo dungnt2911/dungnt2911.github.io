@@ -11,6 +11,7 @@ theme = "PaperMod"
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
+  customCSS = ["css/extended/custom.css"]
   
   # Dark Mode
   defaultTheme = "auto" # auto, light, dark
@@ -31,7 +32,7 @@ theme = "PaperMod"
     [[params.profileMode.buttons]]
       name = "GitHub"
       url = "https://github.com/dungnt2911"
-
+      
   # Social Links
   [[params.socialIcons]]
     name = "github"
