@@ -34,7 +34,7 @@ theme = "PaperMod"
   
   # Custom CSS - Cấu hình đúng cho PaperMod
   [params.assets]
-    disableFingerprinting = false
+    disableFingerprinting = true
       
   # Social Links
   [[params.socialIcons]]
