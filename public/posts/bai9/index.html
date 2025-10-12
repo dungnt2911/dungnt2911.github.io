@@ -5,14 +5,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Arrow Functions va ES6 | Blog Lập Trình Java &amp; JavaScript</title>
-<meta name="keywords" content="">
-<meta name="description" content="Arrow function la cach viet ham ngan gon hon trong ES6.
-ES6 them nhieu tinh nang moi: let, const, template literals, destructuring.
-Arrow function khong co this rieng, ke thua this tu context ben ngoai.">
+<title>Arrow Functions và ES6 | Blog Lập Trình Java &amp; JavaScript</title>
+<meta name="keywords" content="JavaScript, ES6, Programming">
+<meta name="description" content="Tìm hiểu về Arrow Functions trong ES6 - cú pháp ngắn gọn, this binding và cách sử dụng hiệu quả">
 <meta name="author" content="Nguyễn Tiến Dũng">
 <link rel="canonical" href="https://dungnt2911.github.io/posts/bai9/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.df17d1bc8dd8e2ce46f1a56678d61b114f3b9bec7dd9023d34daabafbb1dcfe7.css" integrity="sha256-3xfRvI3Y4s5G8aVmeNYbEU87m&#43;x92QI9NNqrr7sdz&#43;c=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://dungnt2911.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://dungnt2911.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://dungnt2911.github.io/favicon-32x32.png">
@@ -59,20 +57,19 @@ Arrow function khong co this rieng, ke thua this tu context ben ngoai.">
     </style>
 </noscript><meta property="og:url" content="https://dungnt2911.github.io/posts/bai9/">
   <meta property="og:site_name" content="Blog Lập Trình Java & JavaScript">
-  <meta property="og:title" content="Arrow Functions va ES6">
-  <meta property="og:description" content="Arrow function la cach viet ham ngan gon hon trong ES6.
-ES6 them nhieu tinh nang moi: let, const, template literals, destructuring.
-Arrow function khong co this rieng, ke thua this tu context ben ngoai.">
+  <meta property="og:title" content="Arrow Functions và ES6">
+  <meta property="og:description" content="Tìm hiểu về Arrow Functions trong ES6 - cú pháp ngắn gọn, this binding và cách sử dụng hiệu quả">
   <meta property="og:locale" content="vi">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-10-10T08:00:00+00:00">
     <meta property="article:modified_time" content="2025-10-10T08:00:00+00:00">
+    <meta property="article:tag" content="JavaScript">
+    <meta property="article:tag" content="ES6">
+    <meta property="article:tag" content="Programming">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Arrow Functions va ES6">
-<meta name="twitter:description" content="Arrow function la cach viet ham ngan gon hon trong ES6.
-ES6 them nhieu tinh nang moi: let, const, template literals, destructuring.
-Arrow function khong co this rieng, ke thua this tu context ben ngoai.">
+<meta name="twitter:title" content="Arrow Functions và ES6">
+<meta name="twitter:description" content="Tìm hiểu về Arrow Functions trong ES6 - cú pháp ngắn gọn, this binding và cách sử dụng hiệu quả">
 
 
 <script type="application/ld+json">
@@ -89,7 +86,7 @@ Arrow function khong co this rieng, ke thua this tu context ben ngoai.">
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "Arrow Functions va ES6",
+      "name": "Arrow Functions và ES6",
       "item": "https://dungnt2911.github.io/posts/bai9/"
     }
   ]
@@ -99,14 +96,14 @@ Arrow function khong co this rieng, ke thua this tu context ben ngoai.">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Arrow Functions va ES6",
-  "name": "Arrow Functions va ES6",
-  "description": "Arrow function la cach viet ham ngan gon hon trong ES6.\nES6 them nhieu tinh nang moi: let, const, template literals, destructuring.\nArrow function khong co this rieng, ke thua this tu context ben ngoai.\n",
+  "headline": "Arrow Functions và ES6",
+  "name": "Arrow Functions và ES6",
+  "description": "Tìm hiểu về Arrow Functions trong ES6 - cú pháp ngắn gọn, this binding và cách sử dụng hiệu quả",
   "keywords": [
-    
+    "JavaScript", "ES6", "Programming"
   ],
-  "articleBody": "Arrow function la cach viet ham ngan gon hon trong ES6.\nES6 them nhieu tinh nang moi: let, const, template literals, destructuring.\nArrow function khong co this rieng, ke thua this tu context ben ngoai.\n",
-  "wordCount" : "35",
+  "articleBody": "Giới thiệu Arrow function là một trong những tính năng quan trọng nhất của ES6 (ECMAScript 2015). Nó cung cấp cú pháp ngắn gọn hơn để viết hàm trong JavaScript.\nES6 đã thêm nhiều tính năng mới: let, const, template literals, destructuring, và đặc biệt là arrow functions.\nArrow function không chỉ giúp code ngắn gọn mà còn có cách xử lý this khác biệt so với function thường.\nCú pháp cơ bản Function thường vs Arrow Function // Function thường function add(a, b) { return a + b; } // Arrow function - cú pháp đầy đủ const add = (a, b) =\u003e { return a + b; }; // Arrow function - cú pháp ngắn gọn (implicit return) const add = (a, b) =\u003e a + b; console.log(add(5, 3)); // Output: 8 Một tham số Khi chỉ có một tham số, có thể bỏ dấu ngoặc:\n// Không cần dấu ngoặc const square = x =\u003e x * x; console.log(square(4)); // Output: 16 console.log(square(7)); // Output: 49 Không có tham số Khi không có tham số, cần dấu ngoặc rỗng:\nconst greet = () =\u003e console.log(\"Xin chào!\"); greet(); // Output: Xin chào! const getRandomNumber = () =\u003e Math.random(); console.log(getRandomNumber()); // Output: số ngẫu nhiên Sự khác biệt về this Đây là điểm quan trọng nhất khi sử dụng arrow function!\nFunction thường const person = { name: 'Dũng', age: 25, sayHi: function() { console.log('Xin chào, tôi là ' + this.name); console.log('Năm nay tôi ' + this.age + ' tuổi'); } }; person.sayHi(); // Output: // Xin chào, tôi là Dũng // Năm nay tôi 25 tuổi Arrow function kế thừa this const person = { name: 'Dũng', friends: ['An', 'Bình', 'Chi'], showFriends: function() { this.friends.forEach(friend =\u003e { // Arrow function kế thừa this từ showFriends console.log(this.name + ' là bạn với ' + friend); }); } }; person.showFriends(); // Output: // Dũng là bạn với An // Dũng là bạn với Bình // Dũng là bạn với Chi So sánh với function thường const person = { name: 'Dũng', friends: ['An', 'Bình'], showFriendsWrong: function() { this.friends.forEach(function(friend) { // this ở đây KHÔNG trỏ đến person! console.log(this.name + ' là bạn với ' + friend); }); } }; person.showFriendsWrong(); // Output: undefined là bạn với An // undefined là bạn với Bình Sử dụng với Array Methods Arrow function rất hữu ích với các phương thức của Array.\nMap - Biến đổi mảng const numbers = [1, 2, 3, 4, 5]; // Cách cũ const doubled = numbers.map(function(n) { return n * 2; }); // Arrow function - ngắn gọn hơn const doubled = numbers.map(n =\u003e n * 2); console.log(doubled); // [2, 4, 6, 8, 10] // Ví dụ phức tạp hơn const users = [ { name: 'An', age: 25 }, { name: 'Bình', age: 30 } ]; const names = users.map(user =\u003e user.name); console.log(names); // ['An', 'Bình'] Filter - Lọc mảng const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; // Lọc số chẵn const evenNumbers = numbers.filter(n =\u003e n % 2 === 0); console.log(evenNumbers); // [2, 4, 6, 8, 10] // Lọc số lớn hơn 5 const bigNumbers = numbers.filter(n =\u003e n \u003e 5); console.log(bigNumbers); // [6, 7, 8, 9, 10] // Ví dụ thực tế const products = [ { name: 'Laptop', price: 20000000 }, { name: 'Mouse', price: 200000 }, { name: 'Keyboard', price: 500000 } ]; const expensiveProducts = products.filter(p =\u003e p.price \u003e 1000000); console.log(expensiveProducts); // [{ name: 'Laptop', price: 20000000 }] Reduce - Tính toán tổng hợp const numbers = [1, 2, 3, 4, 5]; // Tính tổng const sum = numbers.reduce((total, n) =\u003e total + n, 0); console.log(sum); // 15 // Tìm số lớn nhất const max = numbers.reduce((max, n) =\u003e n \u003e max ? n : max); console.log(max); // 5 // Đếm số lần xuất hiện const fruits = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple']; const count = fruits.reduce((acc, fruit) =\u003e { acc[fruit] = (acc[fruit] || 0) + 1; return acc; }, {}); console.log(count); // { apple: 3, banana: 2, orange: 1 } Khi nào nên dùng? ✅ Nên dùng Arrow Function 1. Callback functions\n// Event listeners button.addEventListener('click', () =\u003e { console.log('Button clicked!'); }); // setTimeout/setInterval setTimeout(() =\u003e console.log('Hello after 1s'), 1000); // Array methods const doubled = [1, 2, 3].map(x =\u003e x * 2); 2. Promises và Async/Await\n// Promises fetch('/api/users') .then(response =\u003e response.json()) .then(data =\u003e console.log(data)) .catch(error =\u003e console.error(error)); // Async/await const getUsers = async () =\u003e { try { const response = await fetch('/api/users'); const data = await response.json(); return data; } catch (error) { console.error(error); } }; 3. Khi cần kế thừa this từ bên ngoài\nclass Timer { constructor() { this.seconds = 0; // Arrow function kế thừa this từ constructor setInterval(() =\u003e { this.seconds++; console.log(this.seconds); }, 1000); } } const timer = new Timer(); // 1, 2, 3, 4, ... ❌ Không nên dùng Arrow Function 1. Methods trong object (khi cần this riêng)\n// ❌ Sai - this không trỏ đến person const person = { name: 'Dũng', sayHi: () =\u003e { console.log('Xin chào, ' + this.name); // undefined } }; // ✅ Đúng - dùng function thường const person = { name: 'Dũng', sayHi: function() { console.log('Xin chào, ' + this.name); // Dũng } }; // ✅ Hoặc dùng method shorthand (ES6) const person = { name: 'Dũng', sayHi() { console.log('Xin chào, ' + this.name); // Dũng } }; 2. Event handlers khi cần this là element\n// ❌ Sai button.addEventListener('click', () =\u003e { this.classList.add('active'); // this không phải button }); // ✅ Đúng button.addEventListener('click', function() { this.classList.add('active'); // this là button }); 3. Constructors\n// ❌ Sai - không thể dùng arrow function làm constructor const Person = (name) =\u003e { this.name = name; }; const person = new Person('Dũng'); // Error! // ✅ Đúng - dùng function thường hoặc class function Person(name) { this.name = name; } // Hoặc class Person { constructor(name) { this.name = name; } } So sánh tổng hợp Tính năng Function thường Arrow Function Cú pháp function() {} () =\u003e {} this Dynamic (tùy cách gọi) Lexical (kế thừa) arguments Có object arguments Không có Constructor Có thể dùng new Không thể Implicit return Không Có (khi 1 dòng) Hoisting Có Không (với const/let) Ví dụ thực tế 1. Xử lý danh sách sản phẩm const products = [ { id: 1, name: 'Laptop', price: 20000000, inStock: true }, { id: 2, name: 'Mouse', price: 200000, inStock: false }, { id: 3, name: 'Keyboard', price: 500000, inStock: true }, { id: 4, name: 'Monitor', price: 5000000, inStock: true } ]; // Lấy tên tất cả sản phẩm const productNames = products.map(p =\u003e p.name); console.log(productNames); // ['Laptop', 'Mouse', 'Keyboard', 'Monitor'] // Lọc sản phẩm còn hàng const availableProducts = products.filter(p =\u003e p.inStock); console.log(availableProducts); // [Laptop, Keyboard, Monitor] // Tính tổng giá trị hàng tồn kho const totalValue = products .filter(p =\u003e p.inStock) .reduce((sum, p) =\u003e sum + p.price, 0); console.log(totalValue); // 25500000 // Tìm sản phẩm đắt nhất const mostExpensive = products .reduce((max, p) =\u003e p.price \u003e max.price ? p : max); console.log(mostExpensive.name); // Laptop 2. Xử lý API với Async/Await // Fetch user data và posts const getUserWithPosts = async (userId) =\u003e { try { // Lấy thông tin user const userResponse = await fetch(`/api/users/${userId}`); const user = await userResponse.json(); // Lấy posts của user const postsResponse = await fetch(`/api/users/${userId}/posts`); const posts = await postsResponse.json(); return { ...user, posts: posts }; } catch (error) { console.error('Error:', error); throw error; } }; // Sử dụng getUserWithPosts(1) .then(data =\u003e console.log(data)) .catch(error =\u003e console.error(error)); 3. Event handling trong Class class TodoApp { constructor() { this.todos = []; this.init(); } init() { // Arrow function giữ this của class document.getElementById('add-btn').addEventListener('click', () =\u003e { this.addTodo(); }); document.getElementById('clear-btn').addEventListener('click', () =\u003e { this.clearAll(); }); } addTodo() { const input = document.getElementById('todo-input'); if (input.value.trim()) { this.todos.push({ id: Date.now(), text: input.value, completed: false }); this.render(); input.value = ''; } } clearAll() { this.todos = []; this.render(); } render() { const list = document.getElementById('todo-list'); list.innerHTML = this.todos .map(todo =\u003e `${todo.text}`) .join(''); } } const app = new TodoApp(); Tips và Best Practices 1. Sử dụng parentheses cho rõ ràng // Có thể gây nhầm lẫn const multiply = x =\u003e y =\u003e x * y; // Rõ ràng hơn const multiply = (x) =\u003e (y) =\u003e x * y; 2. Return object cần thêm ngoặc tròn // ❌ Sai - JavaScript nghĩ {} là block code const createUser = (name, age) =\u003e { name: name, age: age }; // ✅ Đúng - thêm () để return object const createUser = (name, age) =\u003e ({ name: name, age: age }); // Hoặc dùng shorthand const createUser = (name, age) =\u003e ({ name, age }); 3. Multiline arrow functions // Khi cần nhiều dòng, dùng {} const processData = (data) =\u003e { const cleaned = data.filter(x =\u003e x !== null); const transformed = cleaned.map(x =\u003e x * 2); const result = transformed.reduce((sum, x) =\u003e sum + x, 0); return result; }; // Hoặc chain methods const processData = (data) =\u003e data .filter(x =\u003e x !== null) .map(x =\u003e x * 2) .reduce((sum, x) =\u003e sum + x, 0); Kết luận Arrow function là một tính năng mạnh mẽ của ES6 giúp:\n✅ Code ngắn gọn hơn - giảm boilerplate code\n✅ Dễ đọc hơn - cú pháp rõ ràng, đặc biệt với callbacks\n✅ Ít bug hơn - this predictable, không bị binding issues\n✅ Hiện đại hơn - là standard của JavaScript hiện nay\nQuy tắc vàng:\nDùng arrow function cho callbacks, array methods, promises Dùng function thường cho object methods, constructors, event handlers cần this Hãy thực hành nhiều để làm quen với arrow functions - chúng sẽ giúp code của bạn clean và professional hơn!\nBài tập thực hành Hãy thử viết lại các đoạn code sau bằng arrow function:\n// 1. Tính bình phương các số const numbers = [1, 2, 3, 4, 5]; const squared = numbers.map(function(n) { return n * n; }); // 2. Lọc số lẻ const odds = numbers.filter(function(n) { return n % 2 !== 0; }); // 3. Tìm user theo ID function findUserById(users, id) { return users.find(function(user) { return user.id === id; }); } Đáp án:\n// 1. const squared = numbers.map(n =\u003e n * n); // 2. const odds = numbers.filter(n =\u003e n % 2 !== 0); // 3. const findUserById = (users, id) =\u003e users.find(user =\u003e user.id === id); Tài liệu tham khảo MDN - Arrow Functions JavaScript.info - Arrow Functions Basics ES6 Features - Arrow Functions ",
+  "wordCount" : "1757",
   "inLanguage": "en",
   "datePublished": "2025-10-10T08:00:00Z",
   "dateModified": "2025-10-10T08:00:00Z",
@@ -218,21 +215,501 @@ a { color: var(--primary-blue) !important; }
   <header class="post-header">
     <div class="breadcrumbs"><a href="https://dungnt2911.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://dungnt2911.github.io/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
-      Arrow Functions va ES6
+      Arrow Functions và ES6
     </h1>
-    <div class="post-meta"><span title='2025-10-10 08:00:00 +0000 UTC'>October 10, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Nguyễn Tiến Dũng</span>
+    <div class="post-description">
+      Tìm hiểu về Arrow Functions trong ES6 - cú pháp ngắn gọn, this binding và cách sử dụng hiệu quả
+    </div>
+    <div class="post-meta"><span title='2025-10-10 08:00:00 +0000 UTC'>October 10, 2025</span>&nbsp;·&nbsp;<span>9 min</span>&nbsp;·&nbsp;<span>Nguyễn Tiến Dũng</span>
 
 </div>
   </header> 
-  <div class="post-content"><p>Arrow function la cach viet ham ngan gon hon trong ES6.</p>
-<p>ES6 them nhieu tinh nang moi: let, const, template literals, destructuring.</p>
-<p>Arrow function khong co this rieng, ke thua this tu context ben ngoai.</p>
+  <div class="post-content"><h2 id="giới-thiệu">Giới thiệu<a hidden class="anchor" aria-hidden="true" href="#giới-thiệu">#</a></h2>
+<p>Arrow function là một trong những tính năng quan trọng nhất của ES6 (ECMAScript 2015). Nó cung cấp cú pháp ngắn gọn hơn để viết hàm trong JavaScript.</p>
+<p>ES6 đã thêm nhiều tính năng mới: <strong>let</strong>, <strong>const</strong>, <strong>template literals</strong>, <strong>destructuring</strong>, và đặc biệt là <strong>arrow functions</strong>.</p>
+<p>Arrow function không chỉ giúp code ngắn gọn mà còn có cách xử lý <code>this</code> khác biệt so với function thường.</p>
+<hr>
+<h2 id="cú-pháp-cơ-bản">Cú pháp cơ bản<a hidden class="anchor" aria-hidden="true" href="#cú-pháp-cơ-bản">#</a></h2>
+<h3 id="function-thường-vs-arrow-function">Function thường vs Arrow Function<a hidden class="anchor" aria-hidden="true" href="#function-thường-vs-arrow-function">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Function thường
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Arrow function - cú pháp đầy đủ
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">add</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Arrow function - cú pháp ngắn gọn (implicit return)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">add</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">add</span>(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">3</span>)); <span style="color:#75715e">// Output: 8
+</span></span></span></code></pre></div><h3 id="một-tham-số">Một tham số<a hidden class="anchor" aria-hidden="true" href="#một-tham-số">#</a></h3>
+<p>Khi chỉ có một tham số, có thể bỏ dấu ngoặc:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Không cần dấu ngoặc
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">square</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span> =&gt; <span style="color:#a6e22e">x</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">x</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">square</span>(<span style="color:#ae81ff">4</span>)); <span style="color:#75715e">// Output: 16
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">square</span>(<span style="color:#ae81ff">7</span>)); <span style="color:#75715e">// Output: 49
+</span></span></span></code></pre></div><h3 id="không-có-tham-số">Không có tham số<a hidden class="anchor" aria-hidden="true" href="#không-có-tham-số">#</a></h3>
+<p>Khi không có tham số, cần dấu ngoặc rỗng:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">greet</span> <span style="color:#f92672">=</span> () =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Xin chào!&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">greet</span>(); <span style="color:#75715e">// Output: Xin chào!
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">getRandomNumber</span> <span style="color:#f92672">=</span> () =&gt; Math.<span style="color:#a6e22e">random</span>();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">getRandomNumber</span>()); <span style="color:#75715e">// Output: số ngẫu nhiên
+</span></span></span></code></pre></div><hr>
+<h2 id="sự-khác-biệt-về-this">Sự khác biệt về <code>this</code><a hidden class="anchor" aria-hidden="true" href="#sự-khác-biệt-về-this">#</a></h2>
+<p>Đây là điểm quan trọng nhất khi sử dụng arrow function!</p>
+<h3 id="function-thường">Function thường<a hidden class="anchor" aria-hidden="true" href="#function-thường">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">person</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Dũng&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">25</span>,
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">sayHi</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Xin chào, tôi là &#39;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Năm nay tôi &#39;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">age</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; tuổi&#39;</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">person</span>.<span style="color:#a6e22e">sayHi</span>();
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Output:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Xin chào, tôi là Dũng
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Năm nay tôi 25 tuổi
+</span></span></span></code></pre></div><h3 id="arrow-function-kế-thừa-this">Arrow function kế thừa <code>this</code><a hidden class="anchor" aria-hidden="true" href="#arrow-function-kế-thừa-this">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">person</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Dũng&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">friends</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;An&#39;</span>, <span style="color:#e6db74">&#39;Bình&#39;</span>, <span style="color:#e6db74">&#39;Chi&#39;</span>],
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">showFriends</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">friends</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">friend</span> =&gt; {
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">// Arrow function kế thừa this từ showFriends
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; là bạn với &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">friend</span>);
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">person</span>.<span style="color:#a6e22e">showFriends</span>();
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Output:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Dũng là bạn với An
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Dũng là bạn với Bình
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Dũng là bạn với Chi
+</span></span></span></code></pre></div><h3 id="so-sánh-với-function-thường">So sánh với function thường<a hidden class="anchor" aria-hidden="true" href="#so-sánh-với-function-thường">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">person</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Dũng&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">friends</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;An&#39;</span>, <span style="color:#e6db74">&#39;Bình&#39;</span>],
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">showFriendsWrong</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">friends</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">friend</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">// this ở đây KHÔNG trỏ đến person!
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; là bạn với &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">friend</span>);
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">person</span>.<span style="color:#a6e22e">showFriendsWrong</span>();
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Output: undefined là bạn với An
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//         undefined là bạn với Bình
+</span></span></span></code></pre></div><hr>
+<h2 id="sử-dụng-với-array-methods">Sử dụng với Array Methods<a hidden class="anchor" aria-hidden="true" href="#sử-dụng-với-array-methods">#</a></h2>
+<p>Arrow function rất hữu ích với các phương thức của Array.</p>
+<h3 id="map---biến-đổi-mảng">Map - Biến đổi mảng<a hidden class="anchor" aria-hidden="true" href="#map---biến-đổi-mảng">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Cách cũ
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">doubled</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">map</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">n</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Arrow function - ngắn gọn hơn
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">doubled</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">n</span> =&gt; <span style="color:#a6e22e">n</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">doubled</span>); <span style="color:#75715e">// [2, 4, 6, 8, 10]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Ví dụ phức tạp hơn
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">users</span> <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>  { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;An&#39;</span>, <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">25</span> },
+</span></span><span style="display:flex;"><span>  { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Bình&#39;</span>, <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">30</span> }
+</span></span><span style="display:flex;"><span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">names</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">users</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">user</span> =&gt; <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">names</span>); <span style="color:#75715e">// [&#39;An&#39;, &#39;Bình&#39;]
+</span></span></span></code></pre></div><h3 id="filter---lọc-mảng">Filter - Lọc mảng<a hidden class="anchor" aria-hidden="true" href="#filter---lọc-mảng">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Lọc số chẵn
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">evenNumbers</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">n</span> =&gt; <span style="color:#a6e22e">n</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">evenNumbers</span>); <span style="color:#75715e">// [2, 4, 6, 8, 10]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Lọc số lớn hơn 5
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">bigNumbers</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">n</span> =&gt; <span style="color:#a6e22e">n</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">5</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">bigNumbers</span>); <span style="color:#75715e">// [6, 7, 8, 9, 10]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Ví dụ thực tế
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">products</span> <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>  { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Laptop&#39;</span>, <span style="color:#a6e22e">price</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">20000000</span> },
+</span></span><span style="display:flex;"><span>  { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Mouse&#39;</span>, <span style="color:#a6e22e">price</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">200000</span> },
+</span></span><span style="display:flex;"><span>  { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Keyboard&#39;</span>, <span style="color:#a6e22e">price</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">500000</span> }
+</span></span><span style="display:flex;"><span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">expensiveProducts</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">products</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">p</span> =&gt; <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">price</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1000000</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">expensiveProducts</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// [{ name: &#39;Laptop&#39;, price: 20000000 }]
+</span></span></span></code></pre></div><h3 id="reduce---tính-toán-tổng-hợp">Reduce - Tính toán tổng hợp<a hidden class="anchor" aria-hidden="true" href="#reduce---tính-toán-tổng-hợp">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Tính tổng
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">total</span>, <span style="color:#a6e22e">n</span>) =&gt; <span style="color:#a6e22e">total</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">n</span>, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sum</span>); <span style="color:#75715e">// 15
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Tìm số lớn nhất
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">max</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">max</span>, <span style="color:#a6e22e">n</span>) =&gt; <span style="color:#a6e22e">n</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">max</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">max</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">max</span>); <span style="color:#75715e">// 5
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Đếm số lần xuất hiện
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fruits</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;banana&#39;</span>, <span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;orange&#39;</span>, <span style="color:#e6db74">&#39;banana&#39;</span>, <span style="color:#e6db74">&#39;apple&#39;</span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">count</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fruits</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">acc</span>, <span style="color:#a6e22e">fruit</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">acc</span>[<span style="color:#a6e22e">fruit</span>] <span style="color:#f92672">=</span> (<span style="color:#a6e22e">acc</span>[<span style="color:#a6e22e">fruit</span>] <span style="color:#f92672">||</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">acc</span>;
+</span></span><span style="display:flex;"><span>}, {});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">count</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// { apple: 3, banana: 2, orange: 1 }
+</span></span></span></code></pre></div><hr>
+<h2 id="khi-nào-nên-dùng">Khi nào nên dùng?<a hidden class="anchor" aria-hidden="true" href="#khi-nào-nên-dùng">#</a></h2>
+<h3 id="-nên-dùng-arrow-function">✅ Nên dùng Arrow Function<a hidden class="anchor" aria-hidden="true" href="#-nên-dùng-arrow-function">#</a></h3>
+<p><strong>1. Callback functions</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Event listeners
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;click&#39;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Button clicked!&#39;</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// setTimeout/setInterval
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Hello after 1s&#39;</span>), <span style="color:#ae81ff">1000</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Array methods
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">doubled</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>].<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">x</span> =&gt; <span style="color:#a6e22e">x</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>);
+</span></span></code></pre></div><p><strong>2. Promises và Async/Await</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Promises
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#39;/api/users&#39;</span>)
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">response</span> =&gt; <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>())
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">data</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>))
+</span></span><span style="display:flex;"><span>  .<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">error</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">error</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Async/await
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">getUsers</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">async</span> () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">response</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#39;/api/users&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">data</span>;
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">error</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p><strong>3. Khi cần kế thừa <code>this</code> từ bên ngoài</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Timer</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">constructor</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">seconds</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Arrow function kế thừa this từ constructor
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">setInterval</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">seconds</span><span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">seconds</span>);
+</span></span><span style="display:flex;"><span>    }, <span style="color:#ae81ff">1000</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">timer</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Timer</span>(); <span style="color:#75715e">// 1, 2, 3, 4, ...
+</span></span></span></code></pre></div><h3 id="-không-nên-dùng-arrow-function">❌ Không nên dùng Arrow Function<a hidden class="anchor" aria-hidden="true" href="#-không-nên-dùng-arrow-function">#</a></h3>
+<p><strong>1. Methods trong object (khi cần <code>this</code> riêng)</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// ❌ Sai - this không trỏ đến person
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">person</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Dũng&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">sayHi</span><span style="color:#f92672">:</span> () =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Xin chào, &#39;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span>); <span style="color:#75715e">// undefined
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ✅ Đúng - dùng function thường
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">person</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Dũng&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">sayHi</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Xin chào, &#39;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span>); <span style="color:#75715e">// Dũng
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ✅ Hoặc dùng method shorthand (ES6)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">person</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Dũng&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">sayHi</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Xin chào, &#39;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span>); <span style="color:#75715e">// Dũng
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p><strong>2. Event handlers khi cần <code>this</code> là element</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// ❌ Sai
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;click&#39;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#39;active&#39;</span>); <span style="color:#75715e">// this không phải button
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ✅ Đúng
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;click&#39;</span>, <span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#39;active&#39;</span>); <span style="color:#75715e">// this là button
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>});
+</span></span></code></pre></div><p><strong>3. Constructors</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// ❌ Sai - không thể dùng arrow function làm constructor
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Person</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">name</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">person</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Person</span>(<span style="color:#e6db74">&#39;Dũng&#39;</span>); <span style="color:#75715e">// Error!
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ✅ Đúng - dùng function thường hoặc class
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Person</span>(<span style="color:#a6e22e">name</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Hoặc
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h2 id="so-sánh-tổng-hợp">So sánh tổng hợp<a hidden class="anchor" aria-hidden="true" href="#so-sánh-tổng-hợp">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Tính năng</th>
+          <th>Function thường</th>
+          <th>Arrow Function</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Cú pháp</strong></td>
+          <td><code>function() {}</code></td>
+          <td><code>() =&gt; {}</code></td>
+      </tr>
+      <tr>
+          <td><strong><code>this</code></strong></td>
+          <td>Dynamic (tùy cách gọi)</td>
+          <td>Lexical (kế thừa)</td>
+      </tr>
+      <tr>
+          <td><strong><code>arguments</code></strong></td>
+          <td>Có object <code>arguments</code></td>
+          <td>Không có</td>
+      </tr>
+      <tr>
+          <td><strong>Constructor</strong></td>
+          <td>Có thể dùng <code>new</code></td>
+          <td>Không thể</td>
+      </tr>
+      <tr>
+          <td><strong>Implicit return</strong></td>
+          <td>Không</td>
+          <td>Có (khi 1 dòng)</td>
+      </tr>
+      <tr>
+          <td><strong>Hoisting</strong></td>
+          <td>Có</td>
+          <td>Không (với const/let)</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="ví-dụ-thực-tế">Ví dụ thực tế<a hidden class="anchor" aria-hidden="true" href="#ví-dụ-thực-tế">#</a></h2>
+<h3 id="1-xử-lý-danh-sách-sản-phẩm">1. Xử lý danh sách sản phẩm<a hidden class="anchor" aria-hidden="true" href="#1-xử-lý-danh-sách-sản-phẩm">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">products</span> <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>  { <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Laptop&#39;</span>, <span style="color:#a6e22e">price</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">20000000</span>, <span style="color:#a6e22e">inStock</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> },
+</span></span><span style="display:flex;"><span>  { <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Mouse&#39;</span>, <span style="color:#a6e22e">price</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">200000</span>, <span style="color:#a6e22e">inStock</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span> },
+</span></span><span style="display:flex;"><span>  { <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span>, <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Keyboard&#39;</span>, <span style="color:#a6e22e">price</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">500000</span>, <span style="color:#a6e22e">inStock</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> },
+</span></span><span style="display:flex;"><span>  { <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">4</span>, <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Monitor&#39;</span>, <span style="color:#a6e22e">price</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">5000000</span>, <span style="color:#a6e22e">inStock</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> }
+</span></span><span style="display:flex;"><span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Lấy tên tất cả sản phẩm
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">productNames</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">products</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">p</span> =&gt; <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">name</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">productNames</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// [&#39;Laptop&#39;, &#39;Mouse&#39;, &#39;Keyboard&#39;, &#39;Monitor&#39;]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Lọc sản phẩm còn hàng
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">availableProducts</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">products</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">p</span> =&gt; <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">inStock</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">availableProducts</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// [Laptop, Keyboard, Monitor]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Tính tổng giá trị hàng tồn kho
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">totalValue</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">products</span>
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">p</span> =&gt; <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">inStock</span>)
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">sum</span>, <span style="color:#a6e22e">p</span>) =&gt; <span style="color:#a6e22e">sum</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">price</span>, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">totalValue</span>); <span style="color:#75715e">// 25500000
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Tìm sản phẩm đắt nhất
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">mostExpensive</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">products</span>
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">max</span>, <span style="color:#a6e22e">p</span>) =&gt; <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">price</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">max</span>.<span style="color:#a6e22e">price</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">p</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">max</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">mostExpensive</span>.<span style="color:#a6e22e">name</span>); <span style="color:#75715e">// Laptop
+</span></span></span></code></pre></div><h3 id="2-xử-lý-api-với-asyncawait">2. Xử lý API với Async/Await<a hidden class="anchor" aria-hidden="true" href="#2-xử-lý-api-với-asyncawait">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Fetch user data và posts
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">getUserWithPosts</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">async</span> (<span style="color:#a6e22e">userId</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Lấy thông tin user
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">userResponse</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">`/api/users/</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">userId</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">userResponse</span>.<span style="color:#a6e22e">json</span>();
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Lấy posts của user
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">postsResponse</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">`/api/users/</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">userId</span><span style="color:#e6db74">}</span><span style="color:#e6db74">/posts`</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">posts</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">postsResponse</span>.<span style="color:#a6e22e">json</span>();
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>      ...<span style="color:#a6e22e">user</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">posts</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">posts</span>
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#39;Error:&#39;</span>, <span style="color:#a6e22e">error</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">throw</span> <span style="color:#a6e22e">error</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Sử dụng
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">getUserWithPosts</span>(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">data</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>))
+</span></span><span style="display:flex;"><span>  .<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">error</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">error</span>));
+</span></span></code></pre></div><h3 id="3-event-handling-trong-class">3. Event handling trong Class<a hidden class="anchor" aria-hidden="true" href="#3-event-handling-trong-class">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TodoApp</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">constructor</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">todos</span> <span style="color:#f92672">=</span> [];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">init</span>();
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">init</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Arrow function giữ this của class
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;add-btn&#39;</span>).<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;click&#39;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">addTodo</span>();
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;clear-btn&#39;</span>).<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;click&#39;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">clearAll</span>();
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">addTodo</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">input</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;todo-input&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">value</span>.<span style="color:#a6e22e">trim</span>()) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">todos</span>.<span style="color:#a6e22e">push</span>({
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> Date.<span style="color:#a6e22e">now</span>(),
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">text</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">value</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">completed</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>      });
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">render</span>();
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">clearAll</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">todos</span> <span style="color:#f92672">=</span> [];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">render</span>();
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">render</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">list</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;todo-list&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">list</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">todos</span>
+</span></span><span style="display:flex;"><span>      .<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">todo</span> =&gt; <span style="color:#e6db74">`&lt;li&gt;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">todo</span>.<span style="color:#a6e22e">text</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&lt;/li&gt;`</span>)
+</span></span><span style="display:flex;"><span>      .<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#39;&#39;</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">app</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">TodoApp</span>();
+</span></span></code></pre></div><hr>
+<h2 id="tips-và-best-practices">Tips và Best Practices<a hidden class="anchor" aria-hidden="true" href="#tips-và-best-practices">#</a></h2>
+<h3 id="1-sử-dụng-parentheses-cho-rõ-ràng">1. Sử dụng parentheses cho rõ ràng<a hidden class="anchor" aria-hidden="true" href="#1-sử-dụng-parentheses-cho-rõ-ràng">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Có thể gây nhầm lẫn
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">multiply</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span> =&gt; <span style="color:#a6e22e">y</span> =&gt; <span style="color:#a6e22e">x</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">y</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Rõ ràng hơn
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">multiply</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">x</span>) =&gt; (<span style="color:#a6e22e">y</span>) =&gt; <span style="color:#a6e22e">x</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">y</span>;
+</span></span></code></pre></div><h3 id="2-return-object-cần-thêm-ngoặc-tròn">2. Return object cần thêm ngoặc tròn<a hidden class="anchor" aria-hidden="true" href="#2-return-object-cần-thêm-ngoặc-tròn">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// ❌ Sai - JavaScript nghĩ {} là block code
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">createUser</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">age</span>) =&gt; { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">age</span> };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// ✅ Đúng - thêm () để return object
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">createUser</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">age</span>) =&gt; ({ <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">age</span> });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Hoặc dùng shorthand
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">createUser</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">age</span>) =&gt; ({ <span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">age</span> });
+</span></span></code></pre></div><h3 id="3-multiline-arrow-functions">3. Multiline arrow functions<a hidden class="anchor" aria-hidden="true" href="#3-multiline-arrow-functions">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Khi cần nhiều dòng, dùng {}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">processData</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">data</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cleaned</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">x</span> =&gt; <span style="color:#a6e22e">x</span> <span style="color:#f92672">!==</span> <span style="color:#66d9ef">null</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">transformed</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">cleaned</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">x</span> =&gt; <span style="color:#a6e22e">x</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">transformed</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">sum</span>, <span style="color:#a6e22e">x</span>) =&gt; <span style="color:#a6e22e">sum</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">x</span>, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">result</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Hoặc chain methods
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">processData</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">data</span>) =&gt; <span style="color:#a6e22e">data</span>
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">x</span> =&gt; <span style="color:#a6e22e">x</span> <span style="color:#f92672">!==</span> <span style="color:#66d9ef">null</span>)
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">x</span> =&gt; <span style="color:#a6e22e">x</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">sum</span>, <span style="color:#a6e22e">x</span>) =&gt; <span style="color:#a6e22e">sum</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">x</span>, <span style="color:#ae81ff">0</span>);
+</span></span></code></pre></div><hr>
+<h2 id="kết-luận">Kết luận<a hidden class="anchor" aria-hidden="true" href="#kết-luận">#</a></h2>
+<p>Arrow function là một tính năng mạnh mẽ của ES6 giúp:</p>
+<p>✅ <strong>Code ngắn gọn hơn</strong> - giảm boilerplate code<br>
+✅ <strong>Dễ đọc hơn</strong> - cú pháp rõ ràng, đặc biệt với callbacks<br>
+✅ <strong>Ít bug hơn</strong> - <code>this</code> predictable, không bị binding issues<br>
+✅ <strong>Hiện đại hơn</strong> - là standard của JavaScript hiện nay</p>
+<p><strong>Quy tắc vàng:</strong></p>
+<ul>
+<li>Dùng arrow function cho <strong>callbacks, array methods, promises</strong></li>
+<li>Dùng function thường cho <strong>object methods, constructors, event handlers cần <code>this</code></strong></li>
+</ul>
+<p>Hãy thực hành nhiều để làm quen với arrow functions - chúng sẽ giúp code của bạn clean và professional hơn!</p>
+<hr>
+<h2 id="bài-tập-thực-hành">Bài tập thực hành<a hidden class="anchor" aria-hidden="true" href="#bài-tập-thực-hành">#</a></h2>
+<p>Hãy thử viết lại các đoạn code sau bằng arrow function:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// 1. Tính bình phương các số
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">squared</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">map</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">n</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">n</span>;
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 2. Lọc số lẻ
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">odds</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">n</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">!==</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 3. Tìm user theo ID
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">findUserById</span>(<span style="color:#a6e22e">users</span>, <span style="color:#a6e22e">id</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">users</span>.<span style="color:#a6e22e">find</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">user</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">id</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">id</span>;
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Đáp án:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// 1.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">squared</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">n</span> =&gt; <span style="color:#a6e22e">n</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">n</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 2.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">odds</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">n</span> =&gt; <span style="color:#a6e22e">n</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">!==</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 3.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">findUserById</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">users</span>, <span style="color:#a6e22e">id</span>) =&gt; <span style="color:#a6e22e">users</span>.<span style="color:#a6e22e">find</span>(<span style="color:#a6e22e">user</span> =&gt; <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">id</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">id</span>);
+</span></span></code></pre></div><hr>
+<h2 id="tài-liệu-tham-khảo">Tài liệu tham khảo<a hidden class="anchor" aria-hidden="true" href="#tài-liệu-tham-khảo">#</a></h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">MDN - Arrow Functions</a></li>
+<li><a href="https://javascript.info/arrow-functions-basics">JavaScript.info - Arrow Functions Basics</a></li>
+<li><a href="http://es6-features.org/#ExpressionBodies">ES6 Features - Arrow Functions</a></li>
+</ul>
 
 
   </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="https://dungnt2911.github.io/tags/javascript/">JavaScript</a></li>
+      <li><a href="https://dungnt2911.github.io/tags/es6/">ES6</a></li>
+      <li><a href="https://dungnt2911.github.io/tags/programming/">Programming</a></li>
     </ul>
 <nav class="paginav">
   <a class="next" href="https://dungnt2911.github.io/posts/bai8/">
@@ -245,8 +722,8 @@ a { color: var(--primary-blue) !important; }
 
 <ul class="share-buttons">
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Arrow Functions va ES6 on x"
-            href="https://x.com/intent/tweet/?text=Arrow%20Functions%20va%20ES6&amp;url=https%3a%2f%2fdungnt2911.github.io%2fposts%2fbai9%2f&amp;hashtags=">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Arrow Functions và ES6 on x"
+            href="https://x.com/intent/tweet/?text=Arrow%20Functions%20v%c3%a0%20ES6&amp;url=https%3a%2f%2fdungnt2911.github.io%2fposts%2fbai9%2f&amp;hashtags=JavaScript%2cES6%2cProgramming">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
@@ -254,8 +731,8 @@ a { color: var(--primary-blue) !important; }
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Arrow Functions va ES6 on linkedin"
-            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fdungnt2911.github.io%2fposts%2fbai9%2f&amp;title=Arrow%20Functions%20va%20ES6&amp;summary=Arrow%20Functions%20va%20ES6&amp;source=https%3a%2f%2fdungnt2911.github.io%2fposts%2fbai9%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Arrow Functions và ES6 on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fdungnt2911.github.io%2fposts%2fbai9%2f&amp;title=Arrow%20Functions%20v%c3%a0%20ES6&amp;summary=Arrow%20Functions%20v%c3%a0%20ES6&amp;source=https%3a%2f%2fdungnt2911.github.io%2fposts%2fbai9%2f">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
@@ -263,8 +740,8 @@ a { color: var(--primary-blue) !important; }
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Arrow Functions va ES6 on reddit"
-            href="https://reddit.com/submit?url=https%3a%2f%2fdungnt2911.github.io%2fposts%2fbai9%2f&title=Arrow%20Functions%20va%20ES6">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Arrow Functions và ES6 on reddit"
+            href="https://reddit.com/submit?url=https%3a%2f%2fdungnt2911.github.io%2fposts%2fbai9%2f&title=Arrow%20Functions%20v%c3%a0%20ES6">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
@@ -272,7 +749,7 @@ a { color: var(--primary-blue) !important; }
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Arrow Functions va ES6 on facebook"
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Arrow Functions và ES6 on facebook"
             href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fdungnt2911.github.io%2fposts%2fbai9%2f">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
@@ -281,8 +758,8 @@ a { color: var(--primary-blue) !important; }
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Arrow Functions va ES6 on whatsapp"
-            href="https://api.whatsapp.com/send?text=Arrow%20Functions%20va%20ES6%20-%20https%3a%2f%2fdungnt2911.github.io%2fposts%2fbai9%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Arrow Functions và ES6 on whatsapp"
+            href="https://api.whatsapp.com/send?text=Arrow%20Functions%20v%c3%a0%20ES6%20-%20https%3a%2f%2fdungnt2911.github.io%2fposts%2fbai9%2f">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
@@ -290,8 +767,8 @@ a { color: var(--primary-blue) !important; }
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Arrow Functions va ES6 on telegram"
-            href="https://telegram.me/share/url?text=Arrow%20Functions%20va%20ES6&amp;url=https%3a%2f%2fdungnt2911.github.io%2fposts%2fbai9%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Arrow Functions và ES6 on telegram"
+            href="https://telegram.me/share/url?text=Arrow%20Functions%20v%c3%a0%20ES6&amp;url=https%3a%2f%2fdungnt2911.github.io%2fposts%2fbai9%2f">
             <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
@@ -299,8 +776,8 @@ a { color: var(--primary-blue) !important; }
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Arrow Functions va ES6 on ycombinator"
-            href="https://news.ycombinator.com/submitlink?t=Arrow%20Functions%20va%20ES6&u=https%3a%2f%2fdungnt2911.github.io%2fposts%2fbai9%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Arrow Functions và ES6 on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=Arrow%20Functions%20v%c3%a0%20ES6&u=https%3a%2f%2fdungnt2911.github.io%2fposts%2fbai9%2f">
             <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
                 xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
                 <path

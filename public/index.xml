@@ -9,13 +9,11 @@
     <lastBuildDate>Fri, 10 Oct 2025 08:00:00 +0000</lastBuildDate>
     <atom:link href="https://dungnt2911.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Arrow Functions va ES6</title>
+      <title>Arrow Functions và ES6</title>
       <link>https://dungnt2911.github.io/posts/bai9/</link>
       <pubDate>Fri, 10 Oct 2025 08:00:00 +0000</pubDate>
       <guid>https://dungnt2911.github.io/posts/bai9/</guid>
-      <description>&lt;p&gt;Arrow function la cach viet ham ngan gon hon trong ES6.&lt;/p&gt;
-&lt;p&gt;ES6 them nhieu tinh nang moi: let, const, template literals, destructuring.&lt;/p&gt;
-&lt;p&gt;Arrow function khong co this rieng, ke thua this tu context ben ngoai.&lt;/p&gt;</description>
+      <description>Tìm hiểu về Arrow Functions trong ES6 - cú pháp ngắn gọn, this binding và cách sử dụng hiệu quả</description>
     </item>
     <item>
       <title>Async Await va Promise</title>

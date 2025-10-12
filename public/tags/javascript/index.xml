@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>JavaScript on Blog Lập Trình Java &amp; JavaScript</title>
+    <link>https://dungnt2911.github.io/tags/javascript/</link>
+    <description>Recent content in JavaScript on Blog Lập Trình Java &amp; JavaScript</description>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>vi</language>
+    <lastBuildDate>Fri, 10 Oct 2025 08:00:00 +0000</lastBuildDate>
+    <atom:link href="https://dungnt2911.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arrow Functions và ES6</title>
+      <link>https://dungnt2911.github.io/posts/bai9/</link>
+      <pubDate>Fri, 10 Oct 2025 08:00:00 +0000</pubDate>
+      <guid>https://dungnt2911.github.io/posts/bai9/</guid>
+      <description>Tìm hiểu về Arrow Functions trong ES6 - cú pháp ngắn gọn, this binding và cách sử dụng hiệu quả</description>
+    </item>
+  </channel>
+</rss>
