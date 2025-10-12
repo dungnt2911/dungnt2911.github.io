@@ -6,6 +6,7 @@ tags: ["JavaScript", "ES6", "Programming"]
 categories: ["JavaScript"]
 author: "Nguyễn Tiến Dũng"
 description: "Tìm hiểu về Arrow Functions trong ES6 - cú pháp ngắn gọn, this binding và cách sử dụng hiệu quả"
+summary: "Arrow function là cách viết hàm ngắn gọn hơn trong ES6. Tìm hiểu cú pháp, this binding và cách sử dụng hiệu quả."
 ---
 
 ## Giới thiệu
