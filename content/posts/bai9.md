@@ -16,7 +16,6 @@ ES6 đã thêm nhiều tính năng mới: **let**, **const**, **template literal
 
 Arrow function không chỉ giúp code ngắn gọn mà còn có cách xử lý `this` khác biệt so với function thường.
 
-<!--more-->
 
 ---
 
