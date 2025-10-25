@@ -69,23 +69,23 @@
 
 {{- if not site.Params.assets.disableFingerprinting }}
 {{- $stylesheet := $stylesheet | fingerprint }}
-<link crossorigin="anonymous" href="{{ $stylesheet.RelPermalink }}" integrity="{{ $stylesheet.Data.Integrity }}" rel="preload stylesheet" as="style">
+<link href="{{ $stylesheet.RelPermalink }}" rel="preload stylesheet" as="style">
 {{- else }}
-<link crossorigin="anonymous" href="{{ $stylesheet.RelPermalink }}" rel="preload stylesheet" as="style">
+<link href="{{ $stylesheet.RelPermalink }}" rel="preload stylesheet" as="style">
 {{- end }}
 
 {{- /* Search */}}
 {{- if (eq .Layout `search`) -}}
-<link crossorigin="anonymous" rel="preload" as="fetch" href="../index.json">
+<link rel="preload" as="fetch" href="../index.json">
 {{- $fastsearch := resources.Get "js/fastsearch.js" | js.Build (dict "params" (dict "fuseOpts" site.Params.fuseOpts)) | resources.Minify }}
 {{- $fusejs := resources.Get "js/fuse.basic.min.js" }}
 {{- $license_js := resources.Get "js/license.js" }}
 {{- if not site.Params.assets.disableFingerprinting }}
 {{- $search := (slice $fusejs $license_js $fastsearch ) | resources.Concat "assets/js/search.js" | fingerprint }}
-<script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}" integrity="{{ $search.Data.Integrity }}"></script>
+<script defer src="{{ $search.RelPermalink }}"></script>
 {{- else }}
 {{- $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" }}
-<script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}"></script>
+<script defer src="{{ $search.RelPermalink }}"></script>
 {{- end }}
 {{- end -}}
 
@@ -155,18 +155,3 @@
 {{- partial "templates/twitter_cards.html" . }}
 {{- partial "templates/schema_json.html" . }}
 {{- end -}}
-
-<!-- Custom CSS -->
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
-:root { --primary-blue: #2563eb; }
-body { font-family: 'Inter', sans-serif !important; }
-h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif !important; }
-a { color: var(--primary-blue) !important; }
-.logo a { color: var(--primary-blue) !important; font-weight: 700; }
-#theme-toggle { background: var(--primary-blue) !important; border-radius: 50%; }
-.post-tags a, button { background: var(--primary-blue) !important; color: white !important; }
-.profile img { border: 3px solid var(--primary-blue) !important; }
-::selection { background: var(--primary-blue); color: white; }
-</style>
-</head>
