@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Web Development on Blog Lập Trình Java &amp; JavaScript</title>
+    <link>http://localhost:1313/tags/web-development/</link>
+    <description>Recent content in Web Development on Blog Lập Trình Java &amp; JavaScript</description>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>vi</language>
+    <lastBuildDate>Fri, 10 Oct 2025 06:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/web-development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DOM Manipulation - Thao tác với DOM trong JavaScript</title>
+      <link>http://localhost:1313/posts/bai7/</link>
+      <pubDate>Fri, 10 Oct 2025 06:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/bai7/</guid>
+      <description>Tìm hiểu cách thao tác với DOM - thay đổi nội dung, thuộc tính, CSS và xử lý events trong JavaScript</description>
+    </item>
+    <item>
+      <title>JavaScript cơ bản</title>
+      <link>http://localhost:1313/posts/bai6/</link>
+      <pubDate>Fri, 10 Oct 2025 05:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/bai6/</guid>
+      <description>Tìm hiểu các kiến thức nền tảng về JavaScript - kiểu dữ liệu, lập trình hướng đối tượng và functional programming</description>
+    </item>
+  </channel>
+</rss>

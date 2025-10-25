@@ -8,6 +8,22 @@ author: "Nguyễn Tiến Dũng"
 description: "Tìm hiểu về Arrow Functions trong ES6 - cú pháp ngắn gọn, this binding và cách sử dụng hiệu quả"
 summary: "Arrow function là cách viết hàm ngắn gọn hơn trong ES6. Tìm hiểu cú pháp, this binding và cách sử dụng hiệu quả."
 ---
+<div style="background: #f8f9fa; border: 2px solid #e9ecef; border-radius: 8px; padding: 20px 30px; margin: 30px 0;">
+  <h2 style="margin-top: 0; color: #2c3e50; font-size: 24px; border-bottom: 2px solid #4CAF50; padding-bottom: 10px;">📋 Mục lục</h2>
+  <ol style="line-height: 2;">
+    <li><a href="#giới-thiệu">Giới thiệu</a></li>
+    <li><a href="#cú-pháp-cơ-bản">Cú pháp cơ bản</a></li>
+    <li><a href="#sự-khác-biệt-về-this">Sự khác biệt về this</a></li>
+    <li><a href="#sử-dụng-với-array-methods">Sử dụng với Array Methods</a></li>
+    <li><a href="#khi-nào-nên-dùng">Khi nào nên dùng?</a></li>
+    <li><a href="#so-sánh-tổng-hợp">So sánh tổng hợp</a></li>
+    <li><a href="#ví-dụ-thực-tế">Ví dụ thực tế</a></li>
+    <li><a href="#tips-và-best-practices">Tips và Best Practices</a></li>
+    <li><a href="#kết-luận">Kết luận</a></li>
+    <li><a href="#bài-tập-thực-hành">Bài tập thực hành</a></li>
+    <li><a href="#tài-liệu-tham-khảo">Tài liệu tham khảo</a></li>
+  </ol>
+</div>
 
 ## Giới thiệu
 
@@ -577,3 +593,32 @@ const findUserById = (users, id) => users.find(user => user.id === id);
 - [MDN - Arrow Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 - [JavaScript.info - Arrow Functions Basics](https://javascript.info/arrow-functions-basics)
 - [ES6 Features - Arrow Functions](http://es6-features.org/#ExpressionBodies)
+
+---
+
+## 📚 Bài viết liên quan
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 40px 0;">
+
+<a href="/posts/bai6" style="text-decoration: none;">
+  <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 25px; border-radius: 12px; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'">
+    <div style="font-size: 48px; margin-bottom: 15px; color: white;">🟨</div>
+    <h4 style="margin: 0 0 10px 0; color: white; font-size: 20px;">JavaScript cơ bản</h4>
+    <p style="margin: 0; color: rgba(255,255,255,0.95); font-size: 14px; line-height: 1.6;">Tìm hiểu các kiến thức nền tảng về JavaScript - kiểu dữ liệu, OOP và functional programming</p>
+    <div style="margin-top: 15px; display: flex; gap: 8px; flex-wrap: wrap;">
+      <span style="background: rgba(255,255,255,0.3); padding: 4px 10px; border-radius: 12px; font-size: 12px; color: white;">JavaScript</span>
+      <span style="background: rgba(255,255,255,0.3); padding: 4px 10px; border-radius: 12px; font-size: 12px; color: white;">OOP</span>
+      <span style="background: rgba(255,255,255,0.3); padding: 4px 10px; border-radius: 12px; font-size: 12px; color: white;">Functional</span>
+    </div>
+  </div>
+</a>
+
+<a href="/posts" style="text-decoration: none;">
+  <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 12px; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'">
+    <div style="font-size: 48px; margin-bottom: 15px; color: white;">📚</div>
+    <h4 style="margin: 0 0 10px 0; color: white; font-size: 20px;">Xem tất cả bài viết</h4>
+    <p style="margin: 0; color: rgba(255,255,255,0.9); font-size: 14px; line-height: 1.6;">Khám phá thêm nhiều bài viết về Java, JavaScript và lập trình</p>
+  </div>
+</a>
+
+</div>
