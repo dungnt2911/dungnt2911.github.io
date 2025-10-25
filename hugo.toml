@@ -2,6 +2,8 @@ baseURL = "https://dungnt2911.github.io/"
 languageCode = "vi"
 title = "Blog Lập Trình Java & JavaScript"
 theme = "PaperMod"
+canonifyURLs = true
+relativeURLs = false
 
 [params]
   description = "Chia sẻ kiến thức về Java và JavaScript"
